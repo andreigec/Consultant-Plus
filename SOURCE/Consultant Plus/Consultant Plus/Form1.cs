@@ -29,17 +29,19 @@ namespace Consultant_Plus
             @" Andrei Gec (http://www.andreigec.net)
 
 Licensed under GNU LGPL (http://www.gnu.org/)
-
-Zip Assets © SharpZipLib (http://www.sharpdevelop.net/OpenSource/SharpZipLib/)
 ";
         #endregion
 
-#region vars
+        #region vars
 
         private Project p;
         private const string projectdir = "Project";
+        public const string chargecolumn = "Charge";
+        private const string cfgfile = "consultantplus.cfg";
+        private const string previoussessionkeyword = "Previous Project";
+        private double acculumatedTime = 0;
 
-#endregion
+        #endregion
 
         public Form1()
         {
@@ -59,44 +61,90 @@ Zip Assets © SharpZipLib (http://www.sharpdevelop.net/OpenSource/SharpZipLib/)
             CloseProject();
 
             Licensing.CreateLicense(this, HelpString, AppTitle, AppVersion, OtherText, VersionPath, UpdatePath, ChangelogPath, menuStrip1);
+
+            LoadConfig();
+        }
+
+        private void LoadConfig()
+        {
+            try
+            {
+                var literals = FormConfigRestore.LoadConfig(this, cfgfile);
+
+                if (literals != null)
+                {
+                    foreach (var s in literals)
+                    {
+                        if (s.Item1.Equals(previoussessionkeyword))
+                            LoadProject(s.Item2);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                try
+                {
+                    File.Delete(cfgfile);
+                }
+                catch (Exception)
+                {
+                    
+                }
+               
+            }
+            
+
+        }
+
+        private void SaveConfig()
+        {
+            var lc = new List<Control>();
+            var tsi = new List<ToolStripItem>();
+            tsi.Add(loadLastProjectOnStartupToolStripMenuItem);
+
+            var sas = new List<Tuple<String, String>>();
+            if (p!=null&&string.IsNullOrEmpty(p.GetProjectPath())==false)
+                sas.Add(new Tuple<string, string>(previoussessionkeyword, p.GetProjectPath()));
+
+            FormConfigRestore.SaveConfig(this, cfgfile, lc, tsi,sas);
         }
 
         private void newProjectToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var pi = CreateProject.ShowDialogCreate();
-            if (pi == null)
+            var p = controller.CreateProject(projectdir);
+
+            if (p == null)
                 return;
 
-            var res = controller.CreateProject(projectdir,pi);
-
-            if (res.Item2==null)
-            {
-                MessageBox.Show("An error occured when creating the project:\n"+res.Item1);
-                return;
-            }
-
-            OpenProject(res.Item2);
+            OpenProject(p);
         }
 
         private void OpenProject(Project pn)
         {
+            acculumatedTime = 0;
+            editbutton.Enabled = true;
             devteamlabel.Text = pn.DeveloperName;
             projectnamelabel.Text = pn.ProjectName;
             clientlabel.Text = pn.ClientName;
             currencycodelabel.Text = pn.CurrencyCode;
             p = pn;
-            TabPageUpdates.SetEnableOnAllTabPagesInTabControl(tabControl1, true); 
+            TabPageUpdates.SetEnableOnAllTabPagesInTabControl(tabControl1, true);
+            LoadSessions();
+            datetextbox.Text = DateTime.Now.ToShortDateString();
         }
 
         private void CloseProject()
         {
+            acculumatedTime = 0;
+            editbutton.Enabled = false;
             p = null;
             devteamlabel.Text = "";
             projectnamelabel.Text = "";
             clientlabel.Text = "";
             currencycodelabel.Text = "";
             StopTimer();
-            TabPageUpdates.SetEnableOnAllTabPagesInTabControl(tabControl1,false,new ListUpdates<TabPage>(){infopage});
+            ClearSessions();
+            TabPageUpdates.SetEnableOnAllTabPagesInTabControl(tabControl1, false, new List<TabPage>() { infopage });
         }
 
         private void openProjectToolStripMenuItem_Click(object sender, EventArgs e)
@@ -110,18 +158,22 @@ Zip Assets © SharpZipLib (http://www.sharpdevelop.net/OpenSource/SharpZipLib/)
             if (r != DialogResult.OK)
                 return;
 
-            var res = controller.LoadProject(fbd.SelectedPath);
+            LoadProject(fbd.SelectedPath);
+        }
 
-            if (res==null)
+        private  void LoadProject(String path)
+        {
+            var res = controller.LoadProject(path);
+
+            if (res == null)
             {
                 MessageBox.Show("There was an error loading the project");
                 return;
             }
 
-            OpenProject(res);
+            OpenProject(res);  
         }
 
-        private double accumulatedSeconds = 0;
         private void closeProjectToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CloseProject();
@@ -134,7 +186,7 @@ Zip Assets © SharpZipLib (http://www.sharpdevelop.net/OpenSource/SharpZipLib/)
 
         private void pausetimerbutton_Click(object sender, EventArgs e)
         {
-         PauseTimer();  
+            PauseTimer();
         }
 
         private void resettimerbutton_Click(object sender, EventArgs e)
@@ -143,40 +195,70 @@ Zip Assets © SharpZipLib (http://www.sharpdevelop.net/OpenSource/SharpZipLib/)
             if (r != DialogResult.Yes)
                 return;
 
-            accumulatedSeconds = 0;
+            ClearTime();
         }
 
         private void StopTimer()
         {
             timer1.Stop();
-            accumulatedSeconds = 0;
-            UpdateTickLabel();
+            ClearTime();
             SetPostTimeButton();
         }
 
         private void StartTimer()
         {
-            UpdateTickLabel();
+            acculumatedTime = GetTotalSeconds();
+            daysTB.Enabled = hoursTB.Enabled = minutesTB.Enabled = secondsTB.Enabled = false;
             timer1.Start();
             SetPostTimeButton();
         }
 
         private void PauseTimer()
         {
-            UpdateTickLabel();
+            daysTB.Enabled = hoursTB.Enabled = minutesTB.Enabled = secondsTB.Enabled = true;
             timer1.Stop();
             SetPostTimeButton();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            accumulatedSeconds += timer1.Interval / 1000.0;
-            UpdateTickLabel();
+            acculumatedTime += timer1.Interval/1000.0;
+            SetTime((int)acculumatedTime);
         }
 
-        private  void UpdateTickLabel()
+        private void CheckTB(TextBox tb)
         {
-            timelabel.Text = TimeUpdates.TimeInWords((int)accumulatedSeconds);
+            int r;
+            if (string.IsNullOrEmpty(tb.Text) || int.TryParse(tb.Text, out r) == false)
+                tb.Text = "0";
+        }
+
+        private int GetTotalSeconds()
+        {
+            CheckTB(daysTB);
+            CheckTB(hoursTB);
+            CheckTB(minutesTB);
+            CheckTB(secondsTB);
+
+            int d = int.Parse(daysTB.Text);
+            int h = int.Parse(hoursTB.Text);
+            int m = int.Parse(minutesTB.Text);
+            int s = int.Parse(secondsTB.Text);
+
+            return s + (m*60) + (h*3600) + (d*86400);
+        }
+
+        private void SetTime(int totalseconds)
+        {
+            daysTB.Text = ((int)TimeUpdates.GetDays(totalseconds)).ToString();
+            hoursTB.Text = ((int)TimeUpdates.GetHours(totalseconds)).ToString();
+            minutesTB.Text = ((int)TimeUpdates.GetMinutes(totalseconds)).ToString();
+            secondsTB.Text = (totalseconds%60).ToString();
+        }
+
+        private void ClearTime()
+        {
+            daysTB.Text = hoursTB.Text = minutesTB.Text = secondsTB.Text = "0";  
         }
 
         private void SetPostTimeButton()
@@ -191,12 +273,148 @@ Zip Assets © SharpZipLib (http://www.sharpdevelop.net/OpenSource/SharpZipLib/)
                 posttimebutton.Text = "Post Session Into Time Log";
                 posttimebutton.Enabled = true;
             }
-            
         }
 
         private void hourcost_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = TextboxUpdates.HandleInputAsFloat(e.KeyChar, hourcost);
+        }
+
+        private void posttimebutton_Click(object sender, EventArgs e)
+        {
+            double ts = 0;
+            double h = 0;
+            double hourlyrate = 0;
+            try
+            {
+                ts = GetTotalSeconds();
+                h = MathUpdates.Truncate(TimeUpdates.GetHours(ts));
+                hourlyrate = double.Parse(hourcost.Text);
+            }
+            catch (Exception)
+            {
+            }
+
+            if (h == 0)
+            {
+                MessageBox.Show("Error, less than 0.00 hours");
+                return;
+            }
+
+            var s = new Session(datetextbox.Text, hourlyrate, commentstextbox.Text, h);
+
+            ListViewUpdate.CopyClassToListView(sessions, s);
+            controller.UpdateManualColumns(sessions, p);
+            SaveSessions();
+        }
+
+        private List<Session> SerialiseSessions()
+        {
+            var os = ListViewUpdate.GetObjectsFromListViewItems(sessions, typeof(Session));
+            return ListUpdates.ChangeListTyping<Session>(os);
+        }
+
+        private void DeserialiseSession(IEnumerable<Session> sessionsA)
+        {
+            ClearSessions();
+            foreach (var s in sessionsA)
+            {
+                ListViewUpdate.CopyClassToListView(sessions, s);
+            }
+        }
+
+        private void SaveSessions()
+        {
+            var ls = SerialiseSessions();
+            controller.SaveTimesheet(p, ls);
+        }
+
+        private void LoadSessions()
+        {
+            var sl = controller.LoadTimesheet(p);
+            if (sl == null)
+                return;
+
+            DeserialiseSession(sl);
+            controller.UpdateManualColumns(sessions,p);
+        }
+
+        private void ClearSessions()
+        {
+            sessions.Items.Clear();
+            sessions.Columns.Clear();
+            ListViewUpdate.InitColumnHeaders(sessions, typeof(Session));
+            sessions.Columns.Insert(3, chargecolumn);
+            ListViewUpdate.AutoResize(sessions);
+            UpdateSessionButtons();
+        }
+
+        private void editbutton_Click(object sender, EventArgs e)
+        {
+            var p2 = controller.EditProject(p);
+
+            if (p2 == null)
+                return;
+
+            OpenProject(p2);
+        }
+
+        private void deletesessionbutton_Click(object sender, EventArgs e)
+        {
+            if (sessions.SelectedItems.Count != 1)
+                return;
+
+            var res = MessageBox.Show("Are you sure?", "question", MessageBoxButtons.YesNo);
+            if (res != DialogResult.Yes)
+                return;
+
+            sessions.Items.Remove(sessions.SelectedItems[0]);
+            SaveSessions();
+        }
+
+        private void sessions_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateSessionButtons();
+        }
+
+        private void UpdateSessionButtons()
+        {
+            deletesessionbutton.Enabled =
+                editsessionbutton.Enabled =
+                sessions.SelectedItems.Count == 1;
+        }
+
+
+        private void editsessionbutton_Click(object sender, EventArgs e)
+        {
+            controller.EditTimesheet(sessions,sessions.SelectedItems[0]);
+            controller.UpdateManualColumns(sessions, p);
+            SaveSessions();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveConfig();
+        }
+
+        private void daysTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = TextboxUpdates.HandleInput(TextboxUpdates.InputType.Create(false, true),e.KeyChar,daysTB);
+        }
+
+        private void hoursTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = TextboxUpdates.HandleInput(TextboxUpdates.InputType.Create(false, true), e.KeyChar, hoursTB);
+        }
+
+        private void minutesTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = TextboxUpdates.HandleInput(TextboxUpdates.InputType.Create(false, true), e.KeyChar, minutesTB);
+        }
+
+        private void secondsTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = TextboxUpdates.HandleInput(TextboxUpdates.InputType.Create(false, true), e.KeyChar, secondsTB);
         }
     }
 }

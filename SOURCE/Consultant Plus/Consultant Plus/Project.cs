@@ -18,6 +18,11 @@ namespace Consultant_Plus
             ProjectPath = p;
         }
 
+        public string GetProjectPath()
+        {
+            return ProjectPath;
+        }
+
         public Project(string projectName, string developerName, string currencyCode, string clientName)
         {
             ProjectName = projectName;
