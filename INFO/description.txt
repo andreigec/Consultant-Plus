@@ -1,3 +1,0 @@
-Consultant Plus, is a software package that consultants can use to tally their working hours.
-A timer can be started paused and stopped, and when the period is finished, it can be posted to a project.
-When a project has been completed, a simple report can be created to show the total working hours, and the total rate.

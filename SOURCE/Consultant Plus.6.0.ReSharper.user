@@ -1,0 +1,793 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/d:NewControls/f:MassVariableEdit.Designer.cs" caret="2525" fromTop="21" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/d:ClassExtras/f:Zip.cs" caret="2033" fromTop="19" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.Designer.cs" caret="27611" fromTop="8" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/d:NewControls/f:getStringBox.cs" caret="0" fromTop="0" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:controller.cs" caret="3940" fromTop="15" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/f:FormConfigRestore.cs" caret="8504" fromTop="7" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="7183" fromTop="17" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/f:Reflection.cs" caret="1046" fromTop="26" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/d:ClassExtras/f:String.cs" caret="2347" fromTop="20" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/d:ClassExtras/f:Math.cs" caret="1090" fromTop="36" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/f:Time.cs" caret="706" fromTop="12" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/d:ClassExtras/f:ListView.cs" caret="5606" fromTop="15" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/d:ClassReplacements/f:Panel.cs" caret="4412" fromTop="20" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/d:ClassExtras/f:List.cs" caret="1062" fromTop="20" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Project.cs" caret="854" fromTop="20" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Session.cs" caret="501" fromTop="19" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/d:ClassExtras/f:Textbox.cs" caret="2546" fromTop="0" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/d:NewControls/f:MassVariableEdit.cs" caret="2947" fromTop="21" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/f:TimeZone.cs" caret="358" fromTop="14" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/d:NewControls/f:multipleMessageBox.Designer.cs" caret="906" fromTop="21" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/d:ClassExtras/f:Object.cs" caret="479" fromTop="0" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/d:ClassExtras/f:Dictionary.cs" caret="2233" fromTop="39" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/d:ClassExtras/f:File.cs" caret="917" fromTop="21" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/d:ClassExtras/f:TabPage.cs" caret="456" fromTop="14" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/f:Networking.cs" caret="438" fromTop="0" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/d:Licensing/f:Licensing.cs" caret="11527" fromTop="20" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/d:ClassExtras/f:DirectoryUpdates.cs" caret="234" fromTop="11" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/f:ListViewSorter.cs" caret="0" fromTop="0" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/f:MatrixOps.cs" caret="2709" fromTop="20" />
+      <File id="469B8120-B6D8-48BD-97C4-AFAB63AEE304/f:dataClasses.cs" caret="0" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="6523" fromTop="24" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="6704" fromTop="20" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="6222" fromTop="4" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="7131" fromTop="13" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="8084" fromTop="29" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="6110" fromTop="0" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="7323" fromTop="25" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="7142" fromTop="9" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="7945" fromTop="31" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="7224" fromTop="22" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="12423" fromTop="21" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="12639" fromTop="21" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="12861" fromTop="21" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="13083" fromTop="21" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="9260" fromTop="20" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="9078" fromTop="20" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="9141" fromTop="24" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="8841" fromTop="16" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="9047" fromTop="22" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="9365" fromTop="34" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="8510" fromTop="4" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="11830" fromTop="18" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="13108" fromTop="18" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="3182" fromTop="6" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="1432" fromTop="17" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="4249" fromTop="19" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="3709" fromTop="6" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="6365" fromTop="26" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="6879" fromTop="6" />
+      <File id="0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5/f:Form1.cs" caret="7183" fromTop="17" />
+    </RecentEdits>
+  </RecentFiles>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="Application`0" priority="31" />
+      <Item value="#region" priority="31" />
+      <Item value="#endregion" priority="31" />
+      <Item value="project`0" priority="31" />
+      <Item value="Project`0" priority="858" />
+      <Item value="private" priority="1567" />
+      <Item value="static" priority="1855" />
+      <Item value="String`0" priority="1688" />
+      <Item value="getStringBox`0" priority="31" />
+      <Item value="new" priority="1855" />
+      <Item value="getStringBox" priority="28" />
+      <Item value="gsb" priority="63" />
+      <Item value="if" priority="2591" />
+      <Item value="return" priority="2911" />
+      <Item value="FolderBrowserDialog`0" priority="63" />
+      <Item value="const" priority="223" />
+      <Item value="string" priority="1561" />
+      <Item value="Directory`0" priority="159" />
+      <Item value="MessageBox`0" priority="287" />
+      <Item value="thisprojectdir" priority="90" />
+      <Item value="this" priority="95" />
+      <Item value="controller`0" priority="255" />
+      <Item value="public" priority="2463" />
+      <Item value="r" priority="159" />
+      <Item value="void" priority="1247" />
+      <Item value="OpenProject`0" priority="63" />
+      <Item value="bool" priority="479" />
+      <Item value="res" priority="287" />
+      <Item value="false" priority="575" />
+      <Item value="name" priority="127" />
+      <Item value="basedirectory" priority="63" />
+      <Item value="projectpath" priority="159" />
+      <Item value="File`0" priority="319" />
+      <Item value="class" priority="127" />
+      <Item value="ProjectInfo`0" priority="31" />
+      <Item value="iscreate" priority="31" />
+      <Item value="Text" priority="95" />
+      <Item value="ShowDialog`0" priority="63" />
+      <Item value="CreateProject`0" priority="63" />
+      <Item value="CreateProject" priority="57" />
+      <Item value="Close`0" priority="95" />
+      <Item value="using" priority="61" />
+      <Item value="Consultant_Plus" priority="30" />
+      <Item value="PictureBox`0" priority="31" />
+      <Item value="cp" priority="287" />
+      <Item value="pi" priority="255" />
+      <Item value="ProjectInfo" priority="28" />
+      <Item value="projectname" priority="95" />
+      <Item value="developerName" priority="31" />
+      <Item value="devteamname" priority="26" />
+      <Item value="currencycode" priority="31" />
+      <Item value="clientname" priority="31" />
+      <Item value="var" priority="3932" />
+      <Item value="Tuple`0" priority="479" />
+      <Item value="Tuple&lt;string,Project&gt;" priority="57" />
+      <Item value="Project" priority="115" />
+      <Item value="null" priority="863" />
+      <Item value="prop" priority="63" />
+      <Item value="object" priority="574" />
+      <Item value="List" priority="1066" />
+      <Item value="o" priority="319" />
+      <Item value="true" priority="319" />
+      <Item value="filename" priority="191" />
+      <Item value="GetFieldNames`0" priority="95" />
+      <Item value="SelectMany`2" priority="26" />
+      <Item value="p" priority="703" />
+      <Item value="basepath" priority="63" />
+      <Item value="GetInfoFilePath`0" priority="63" />
+      <Item value="List&lt;Tuple&lt;string,string&gt;&gt;" priority="57" />
+      <Item value="GetFieldValues`0" priority="31" />
+      <Item value="ty" priority="223" />
+      <Item value="foreach" priority="895" />
+      <Item value="in" priority="895" />
+      <Item value="fields" priority="95" />
+      <Item value="ret" priority="575" />
+      <Item value="Tuple&lt;string,string&gt;" priority="173" />
+      <Item value="v" priority="95" />
+      <Item value="All`1" priority="26" />
+      <Item value="f" priority="95" />
+      <Item value="FileUpdates`0" priority="319" />
+      <Item value="Type`0" priority="287" />
+      <Item value="s" priority="927" />
+      <Item value="StringUpdates`0" priority="255" />
+      <Item value="removeempty" priority="31" />
+      <Item value="StringSplitOptions`0" priority="63" />
+      <Item value="instance" priority="159" />
+      <Item value="EnvironmentVariableTarget`0" priority="31" />
+      <Item value="s3" priority="31" />
+      <Item value="s4" priority="95" />
+      <Item value="Length" priority="80" />
+      <Item value="field" priority="223" />
+      <Item value="Reflection`0" priority="666" />
+      <Item value="DataGridViewCellStateChangedEventArgs`0" priority="31" />
+      <Item value="FileStream`0" priority="31" />
+      <Item value="FileStream" priority="28" />
+      <Item value="filepath" priority="31" />
+      <Item value="FileMode`0" priority="31" />
+      <Item value="try" priority="223" />
+      <Item value="fs" priority="31" />
+      <Item value="objectType" priority="127" />
+      <Item value="FolderBrowserDialog" priority="28" />
+      <Item value="fbd" priority="159" />
+      <Item value="Environment`0" priority="31" />
+      <Item value="OK" priority="16" />
+      <Item value="typeof" priority="447" />
+      <Item value="projectdir" priority="58" />
+      <Item value="devteamlabel" priority="31" />
+      <Item value="pn" priority="159" />
+      <Item value="projectnamelabel" priority="31" />
+      <Item value="clientlabel" priority="31" />
+      <Item value="currencycodelabel" priority="31" />
+      <Item value="ProjectPath" priority="63" />
+      <Item value="tp" priority="95" />
+      <Item value="IEnumerable" priority="31" />
+      <Item value="c" priority="319" />
+      <Item value="TabControl`0" priority="31" />
+      <Item value="TabPage`0" priority="63" />
+      <Item value="tc" priority="31" />
+      <Item value="excluding" priority="63" />
+      <Item value="continue" priority="282" />
+      <Item value="SetEnableOnAllTabPageControls`0" priority="31" />
+      <Item value="enabled" priority="31" />
+      <Item value="tabControl1" priority="31" />
+      <Item value="ListUpdates&lt;TabPage&gt;" priority="28" />
+      <Item value="infopage" priority="63" />
+      <Item value="timer1" priority="255" />
+      <Item value="int" priority="1377" />
+      <Item value="accumulatedTime" priority="31" />
+      <Item value="timelabel" priority="31" />
+      <Item value="seconds" priority="159" />
+      <Item value="MathUpdates`0" priority="95" />
+      <Item value="val" priority="255" />
+      <Item value="word" priority="287" />
+      <Item value="Pluralise`0" priority="63" />
+      <Item value="minutes" priority="95" />
+      <Item value="hours" priority="127" />
+      <Item value="days" priority="31" />
+      <Item value="accumulatedSeconds" priority="127" />
+      <Item value="PauseTimer`0" priority="31" />
+      <Item value="SetPostTimeButton`0" priority="31" />
+      <Item value="posttimebutton" priority="127" />
+      <Item value="else" priority="191" />
+      <Item value="MessageBoxButtons`0" priority="63" />
+      <Item value="Yes" priority="33" />
+      <Item value="TimeUpdates`0" priority="223" />
+      <Item value="TextboxUpdates`0" priority="123" />
+      <Item value="InputType" priority="57" />
+      <Item value="char" priority="223" />
+      <Item value="Control`0" priority="159" />
+      <Item value="t" priority="223" />
+      <Item value="length" priority="255" />
+      <Item value="start" priority="95" />
+      <Item value="relativeStart" priority="352" />
+      <Item value="isFront" priority="65" />
+      <Item value="origString" priority="128" />
+      <Item value="is" priority="127" />
+      <Item value="TextBox`0" priority="289" />
+      <Item value="as" priority="191" />
+      <Item value="tb" priority="543" />
+      <Item value="ComboBox`0" priority="64" />
+      <Item value="cb" priority="31" />
+      <Item value="l" priority="223" />
+      <Item value="Tuple&lt;int,int,int&gt;" priority="28" />
+      <Item value="end" priority="95" />
+      <Item value="keyChar" priority="95" />
+      <Item value="float" priority="63" />
+      <Item value="out" priority="63" />
+      <Item value="e" priority="223" />
+      <Item value="hourcost" priority="95" />
+      <Item value="IsSpecial`0" priority="31" />
+      <Item value="double" priority="575" />
+      <Item value="GetTimesheetPath`0" priority="63" />
+      <Item value="sessions" priority="762" />
+      <Item value="SerialiseObject`0" priority="31" />
+      <Item value="ignoreErrors" priority="159" />
+      <Item value="Number" priority="31" />
+      <Item value="number" priority="31" />
+      <Item value="ts" priority="31" />
+      <Item value="Session`0" priority="447" />
+      <Item value="SerialiseSessions`0" priority="31" />
+      <Item value="listView1" priority="31" />
+      <Item value="ListViewUpdate`0" priority="383" />
+      <Item value="ListView`0" priority="378" />
+      <Item value="lv" priority="544" />
+      <Item value="ListViewItem`0" priority="447" />
+      <Item value="for" priority="31" />
+      <Item value="a" priority="127" />
+      <Item value="LVI" priority="126" />
+      <Item value="List&lt;string&gt;" priority="28" />
+      <Item value="ListBindingConverter`0" priority="31" />
+      <Item value="Where`1" priority="26" />
+      <Item value="LVIField" priority="95" />
+      <Item value="tl" priority="63" />
+      <Item value="fieldname" priority="97" />
+      <Item value="fieldval" priority="31" />
+      <Item value="serialisedObjectString" priority="31" />
+      <Item value="ls" priority="31" />
+      <Item value="lvi" priority="799" />
+      <Item value="os" priority="31" />
+      <Item value="where" priority="31" />
+      <Item value="T`0" priority="127" />
+      <Item value="ListUpdates`0" priority="63" />
+      <Item value="ref" priority="63" />
+      <Item value="controlStack" priority="31" />
+      <Item value="PanelReplacement`0" priority="58" />
+      <Item value="delegate" priority="31" />
+      <Item value="HandleKeyPress`0" priority="95" />
+      <Item value="MassVariableEdit`0" priority="159" />
+      <Item value="MassVariableEdit" priority="86" />
+      <Item value="mve" priority="287" />
+      <Item value="items" priority="31" />
+      <Item value="Label`0" priority="31" />
+      <Item value="Label" priority="28" />
+      <Item value="k" priority="415" />
+      <Item value="TextBox" priority="28" />
+      <Item value="sender" priority="31" />
+      <Item value="hkp" priority="31" />
+      <Item value="PanelReplacement" priority="29" />
+      <Item value="List&lt;TextBox&gt;" priority="28" />
+      <Item value="h" priority="95" />
+      <Item value="ReturnValues" priority="31" />
+      <Item value="textboxes" priority="31" />
+      <Item value="ShowProjectDialog`0" priority="31" />
+      <Item value="Tuple&lt;string,string,handlers&gt;" priority="28" />
+      <Item value="aboutScreen`0" priority="31" />
+      <Item value="handlers`0" priority="31" />
+      <Item value="overload" priority="122" />
+      <Item value="TextBoxItems`0" priority="31" />
+      <Item value="AcceptFinalTextBoxText`0" priority="31" />
+      <Item value="acceptFinalTextBoxText" priority="32" />
+      <Item value="TextBoxItems" priority="86" />
+      <Item value="acceptFinalText" priority="31" />
+      <Item value="acceptFinalTextBoxTextH" priority="33" />
+      <Item value="FinalTextError" priority="32" />
+      <Item value="errortext" priority="32" />
+      <Item value="handleKeyPress" priority="32" />
+      <Item value="handleKeyPressH" priority="33" />
+      <Item value="LabelText" priority="32" />
+      <Item value="TextBoxName" priority="32" />
+      <Item value="TextBoxPreSetText" priority="32" />
+      <Item value="presetvalue" priority="32" />
+      <Item value="overloads" priority="31" />
+      <Item value="k1" priority="63" />
+      <Item value="Tuple&lt;string,string,TextBoxItems&gt;" priority="28" />
+      <Item value="AcceptFinalTextBoxText" priority="28" />
+      <Item value="x" priority="31" />
+      <Item value="ind" priority="63" />
+      <Item value="FormText" priority="63" />
+      <Item value="classInstance" priority="95" />
+      <Item value="TabControlEventHandler`0" priority="31" />
+      <Item value="tyc" priority="95" />
+      <Item value="t2" priority="31" />
+      <Item value="t3" priority="31" />
+      <Item value="ptemp" priority="159" />
+      <Item value="from" priority="31" />
+      <Item value="ob" priority="63" />
+      <Item value="ToList`0" priority="30" />
+      <Item value="ClearSessions`0" priority="63" />
+      <Item value="SaveProject`0" priority="31" />
+      <Item value="p2" priority="63" />
+      <Item value="Tuple&lt;string,object&gt;" priority="57" />
+      <Item value="expressionBody" priority="63" />
+      <Item value="fn" priority="31" />
+      <Item value="fv" priority="31" />
+      <Item value="sessionsA" priority="63" />
+      <Item value="DeserialiseSession`0" priority="26" />
+      <Item value="file" priority="31" />
+      <Item value="sl" priority="31" />
+      <Item value="Session" priority="116" />
+      <Item value="commentstextbox" priority="31" />
+      <Item value="ListViewItem" priority="58" />
+      <Item value="itemlist" priority="31" />
+      <Item value="i" priority="191" />
+      <Item value="GetColumnNumber`0" priority="31" />
+      <Item value="col" priority="127" />
+      <Item value="SaveSessions`0" priority="63" />
+      <Item value="hc" priority="31" />
+      <Item value="BindingFlags`0" priority="95" />
+      <Item value="ListViewSubItem" priority="28" />
+      <Item value="field2" priority="31" />
+      <Item value="while" priority="31" />
+      <Item value="stest" priority="31" />
+      <Item value="si" priority="31" />
+      <Item value="totalsecondsin" priority="95" />
+      <Item value="GetDays`0" priority="31" />
+      <Item value="Math`0" priority="95" />
+      <Item value="chargecolumn" priority="31" />
+      <Item value="chg" priority="31" />
+      <Item value="CH" priority="31" />
+      <Item value="editbutton" priority="31" />
+      <Item value="deletesessionbutton" priority="31" />
+      <Item value="editsessionbutton" priority="31" />
+      <Item value="manualcreatesessionbutton" priority="31" />
+      <Item value="ReflectMessage`0" priority="31" />
+      <Item value="testlvi" priority="31" />
+      <Item value="tests" priority="31" />
+      <Item value="totalseccolname" priority="63" />
+      <Item value="hourcolname" priority="31" />
+      <Item value="totalsec" priority="26" />
+      <Item value="hourlyrate" priority="31" />
+      <Item value="ShowTimesheetDialog`0" priority="63" />
+      <Item value="overwrite" priority="63" />
+      <Item value="news" priority="31" />
+      <Item value="MemberExpression`0" priority="96" />
+      <Item value="memberExpression" priority="63" />
+      <Item value="me" priority="127" />
+      <Item value="ue" priority="31" />
+      <Item value="create" priority="31" />
+      <Item value="FormConfigRestore`0" priority="63" />
+      <Item value="cfgfile" priority="63" />
+      <Item value="lc" priority="63" />
+      <Item value="loadLastProjectOnStartupToolStripMenuItem" priority="31" />
+      <Item value="ToolStripItem`0" priority="31" />
+      <Item value="saveControls" priority="31" />
+      <Item value="newline" priority="95" />
+      <Item value="output" priority="63" />
+      <Item value="typesep" priority="63" />
+      <Item value="LiteralStrings" priority="63" />
+      <Item value="separator" priority="63" />
+      <Item value="parts" priority="63" />
+      <Item value="line" priority="31" />
+      <Item value="split" priority="159" />
+      <Item value="DataGridLineStyle`0" priority="31" />
+      <Item value="sas" priority="31" />
+      <Item value="literals" priority="63" />
+      <Item value="previoussessionkeyword" priority="31" />
+      <Item value="datetextbox" priority="63" />
+      <Item value="DateTime`0" priority="63" />
+      <Item value="daysTB" priority="191" />
+      <Item value="hoursTB" priority="95" />
+      <Item value="minutesTB" priority="95" />
+      <Item value="secondsTB" priority="95" />
+      <Item value="m" priority="65" />
+      <Item value="d" priority="64" />
+      <Item value="totalseconds" priority="223" />
+      <Item value="ClearTime`0" priority="31" />
+      <Item value="GetTotalSeconds`0" priority="95" />
+      <Item value="SetTime`0" priority="26" />
+      <Item value="acculumatedTime" priority="31" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Application">
+      <Item value="Exit`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ANDREICSLIB.getStringBox">
+      <Item value="ShowDialog`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrEmpty`0" priority="188" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Directory">
+      <Item value="Exists`0" priority="80" />
+      <Item value="CreateDirectory`0" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show`0" priority="243" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Consultant_Plus.controller">
+      <Item value="CreateProject`0" priority="53" />
+      <Item value="LoadProject`0" priority="26" />
+      <Item value="SaveTimesheet`0" priority="53" />
+      <Item value="EditProject`0" priority="26" />
+      <Item value="LoadTimesheet`0" priority="22" />
+      <Item value="ManualAddTimesheet`0" priority="26" />
+      <Item value="EditTimesheet`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.File">
+      <Item value="Create`0" priority="26" />
+      <Item value="Exists`0" priority="107" />
+      <Item value="Delete`0" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Consultant_Plus.CreateProject">
+      <Item value="pi" priority="80" />
+      <Item value="Text" priority="26" />
+      <Item value="projectname" priority="26" />
+      <Item value="devteamname" priority="26" />
+      <Item value="currencycode" priority="26" />
+      <Item value="clientname" priority="26" />
+      <Item value="ShowDialog`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="622" />
+      <Item value="Focus`0" priority="26" />
+      <Item value="SelectionLength" priority="53" />
+      <Item value="SelectionStart" priority="53" />
+      <Item value="Name" priority="53" />
+      <Item value="KeyPress" priority="26" />
+      <Item value="Tag" priority="108" />
+      <Item value="Enabled" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Consultant_Plus.Project">
+      <Item value="ProjectInfo`0" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Consultant_Plus.Project+ProjectInfo">
+      <Item value="ProjectName" priority="54" />
+      <Item value="DeveloperName" priority="26" />
+      <Item value="CurrencyCode" priority="26" />
+      <Item value="ClientName" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Length" priority="107" />
+      <Item value="EndsWith`0" priority="53" />
+      <Item value="TrimEnd`0" priority="55" />
+      <Item value="Trim`0" priority="27" />
+      <Item value="Insert`0" priority="26" />
+      <Item value="Remove`0" priority="53" />
+      <Item value="Equals`0" priority="82" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Consultant_Plus.CreateProject">
+      <Item value="ShowDialogCreate`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Tuple`2">
+      <Item value="Item2" priority="319" />
+      <Item value="Item1" priority="377" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="GetType`0" priority="161" />
+      <Item value="ToString`0" priority="216" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ANDREICSLIB.Reflection">
+      <Item value="SerialiseObject`0" priority="53" />
+      <Item value="DeserialiseFile`0" priority="26" />
+      <Item value="GetFieldNames`0" priority="53" />
+      <Item value="GetFieldValueFromName`0" priority="53" />
+      <Item value="Deserialise`0" priority="53" />
+      <Item value="GetFieldNameAndValue`0" priority="26" />
+      <Item value="GetFieldName`0" priority="161" />
+      <Item value="DeserialiseObject`0" priority="26" />
+      <Item value="GetFieldValue`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Type">
+      <Item value="GetFields`0" priority="53" />
+      <Item value="GetField`0" priority="26" />
+      <Item value="GetProperty`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="469" />
+      <Item value="Contains`0" priority="55" />
+      <Item value="Where`1" priority="26" />
+      <Item value="Remove`0" priority="26" />
+      <Item value="Insert`0" priority="26" />
+      <Item value="All`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.FieldInfo">
+      <Item value="GetValue`0" priority="53" />
+      <Item value="Name" priority="53" />
+      <Item value="SetValue`0" priority="27" />
+      <Item value="FieldType" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ANDREICSLIB.FileUpdates">
+      <Item value="SaveToFile`0" priority="80" />
+      <Item value="LoadFile`0" priority="80" />
+      <Item value="CreateDirectory`0" priority="26" />
+      <Item value="CreateFile`0" priority="108" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ANDREICSLIB.StringUpdates">
+      <Item value="SplitString`0" priority="161" />
+      <Item value="applyTrim`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.StringSplitOptions">
+      <Item value="None" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.FileMode">
+      <Item value="CreateNew" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.FileStream">
+      <Item value="Close`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.FolderBrowserDialog">
+      <Item value="SelectedPath" priority="80" />
+      <Item value="Description" priority="26" />
+      <Item value="ShowDialog`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ANDREICSLIB.ClassExtras.DirectoryUpdates">
+      <Item value="GetExePath`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Label">
+      <Item value="Text" priority="161" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Consultant_Plus.Project">
+      <Item value="DeveloperName" priority="26" />
+      <Item value="ProjectName" priority="53" />
+      <Item value="ClientName" priority="26" />
+      <Item value="CurrencyCode" priority="53" />
+      <Item value="SetProjectPath`0" priority="80" />
+      <Item value="GetProjectPath`0" priority="188" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TabPage">
+      <Item value="Controls" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Control">
+      <Item value="Enabled" priority="26" />
+      <Item value="Text" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TabControl">
+      <Item value="TabPages" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ANDREICSLIB.ClassExtras.TabPageUpdates">
+      <Item value="SetEnableOnAllTabPagesInTabControl`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Timer">
+      <Item value="Stop`0" priority="80" />
+      <Item value="Start`0" priority="26" />
+      <Item value="Interval" priority="53" />
+      <Item value="Enabled" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ANDREICSLIB.MathUpdates">
+      <Item value="Floor`0" priority="26" />
+      <Item value="Truncate`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ANDREICSLIB.TimeUpdates">
+      <Item value="TimeInWords`0" priority="53" />
+      <Item value="GetHours`0" priority="108" />
+      <Item value="GetMinutes`0" priority="54" />
+      <Item value="GetDays`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Button">
+      <Item value="Text" priority="80" />
+      <Item value="Enabled" priority="136" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBoxButtons">
+      <Item value="YesNo" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ANDREICSLIB.TextboxUpdates">
+      <Item value="HandleInput`0" priority="81" />
+      <Item value="HandleInputAsFloat`0" priority="50" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ANDREICSLIB.TextboxUpdates+InputType">
+      <Item value="Create`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox">
+      <Item value="SelectionLength" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Char">
+      <Item value="ToString`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Single">
+      <Item value="TryParse`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.KeyPressEventArgs">
+      <Item value="KeyChar" priority="80" />
+      <Item value="Handled" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView">
+      <Item value="Items" priority="216" />
+      <Item value="Columns" priority="215" />
+      <Item value="SelectedItems" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView+ColumnHeaderCollection">
+      <Item value="Clear`0" priority="53" />
+      <Item value="Add`0" priority="26" />
+      <Item value="Insert`0" priority="26" />
+      <Item value="ContainsKey`0" priority="26" />
+      <Item value="Count" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView+ListViewItemCollection">
+      <Item value="Clear`0" priority="53" />
+      <Item value="Count" priority="26" />
+      <Item value="Add`0" priority="26" />
+      <Item value="Remove`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ANDREICSLIB.ListViewUpdate">
+      <Item value="InitColumnHeaders`0" priority="26" />
+      <Item value="GetObjectsFromListViewItems`0" priority="26" />
+      <Item value="AutoResize`0" priority="26" />
+      <Item value="CopyClassToListView`1" priority="80" />
+      <Item value="GetColumnNumber`0" priority="53" />
+      <Item value="SetColumn`0" priority="26" />
+      <Item value="GetColumn`0" priority="26" />
+      <Item value="GetObjectFromListViewItem`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListViewItem">
+      <Item value="SubItems" priority="350" />
+      <Item value="Name" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListViewItem+ListViewSubItemCollection">
+      <Item value="Count" priority="162" />
+      <Item value="Add`0" priority="26" />
+      <Item value="Remove`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListViewItem+ListViewSubItem">
+      <Item value="Text" priority="107" />
+      <Item value="Name" priority="54" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.ListViewItem">
+      <Item value="ListViewSubItem`0" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ColumnHeader">
+      <Item value="Text" priority="26" />
+      <Item value="Name" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ANDREICSLIB.ClassExtras.ListUpdates">
+      <Item value="ChangeListTyping`2" priority="26" />
+      <Item value="Swap`0" priority="26" />
+      <Item value="ContainsLoopThrough`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ANDREICSLIB.NewControls.MassVariableEdit">
+      <Item value="ShowDialog`0" priority="105" />
+      <Item value="ReturnValues" priority="26" />
+      <Item value="itemspanel" priority="26" />
+      <Item value="Text" priority="81" />
+      <Item value="Show`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ANDREICSLIB.PanelReplacement">
+      <Item value="addControl`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Tuple`3">
+      <Item value="Item1" priority="80" />
+      <Item value="Item2" priority="26" />
+      <Item value="Item3" priority="54" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ANDREICSLIB.NewControls.MassVariableEdit+handlers">
+      <Item value="aft" priority="26" />
+      <Item value="handleKeyPress" priority="26" />
+      <Item value="acceptFinalText" priority="26" />
+      <Item value="FinalTextError" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ANDREICSLIB.NewControls.MassVariableEdit">
+      <Item value="ShowDialog`0" priority="26" />
+      <Item value="TextBoxItems`0" priority="26" />
+      <Item value="ShowDialogStatic`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ANDREICSLIB.NewControls.MassVariableEdit+TextBoxItems">
+      <Item value="Text" priority="26" />
+      <Item value="Name" priority="53" />
+      <Item value="LabelText" priority="26" />
+      <Item value="TextBoxName" priority="80" />
+      <Item value="TextBoxPreSetText" priority="26" />
+      <Item value="acceptFinalText" priority="26" />
+      <Item value="handleKeyPress" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ANDREICSLIB.NewControls.MassVariableEdit+TextBoxItems">
+      <Item value="Create`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="Concat`1" priority="26" />
+      <Item value="Count`1" priority="22" />
+      <Item value="First`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:">
+      <Item value="GetType`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.Expressions.MemberExpression">
+      <Item value="Member" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Double">
+      <Item value="Parse`0" priority="161" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.PropertyInfo">
+      <Item value="Name" priority="26" />
+      <Item value="GetValue`0" priority="22" />
+      <Item value="PropertyType" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Reflection.BindingFlags">
+      <Item value="Public" priority="26" />
+      <Item value="NonPublic" priority="26" />
+      <Item value="Instance" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Consultant_Plus.Session">
+      <Item value="HourlyRate" priority="135" />
+      <Item value="TotalSeconds" priority="80" />
+      <Item value="Hours" priority="53" />
+      <Item value="Date" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Math">
+      <Item value="Floor`0" priority="26" />
+      <Item value="Truncate`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Double">
+      <Item value="ToString`0" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="104" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView+SelectedListViewItemCollection">
+      <Item value="Count" priority="54" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.Expressions.Expression`1">
+      <Item value="Body" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.MemberInfo">
+      <Item value="Name" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.Expressions.UnaryExpression">
+      <Item value="Method" priority="26" />
+      <Item value="Operand" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.MethodInfo">
+      <Item value="Name" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ANDREICSLIB.FormConfigRestore">
+      <Item value="LoadConfig`0" priority="26" />
+      <Item value="SaveConfig`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToShortDateString`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="TryParse`0" priority="26" />
+      <Item value="Parse`0" priority="26" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>
