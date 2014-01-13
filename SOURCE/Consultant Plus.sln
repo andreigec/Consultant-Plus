@@ -1,9 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consultant Plus", "Consultant Plus\Consultant Plus.csproj", "{0B0D8561-F5ED-445D-97ED-8AD36AFB2CB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ANDREICSLIB", "..\..\..\ANDREICSLIB\SOURCE\ANDREICSLIB\ANDREICSLIB.csproj", "{469B8120-B6D8-48BD-97C4-AFAB63AEE304}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ANDREICSLIB", "..\..\ANDREICSLIB\SOURCE\ANDREICSLIB\ANDREICSLIB.csproj", "{469B8120-B6D8-48BD-97C4-AFAB63AEE304}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -9,6 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using ANDREICSLIB;
 using ANDREICSLIB.ClassExtras;
+using Consultant_Plus.ServiceReference1;
 
 namespace Consultant_Plus
 {
@@ -17,12 +18,8 @@ namespace Consultant_Plus
         #region licensing
 
         private const string AppTitle = "Consultant Plus";
-        private const double AppVersion = 0.1;
+        private const double AppVersion = 0.2;
         private const String HelpString = "";
-
-        private const String UpdatePath = "https://github.com/EvilSeven/Consultant-Plus/zipball/master";
-        private const String VersionPath = "https://raw.github.com/EvilSeven/Consultant-Plus/master/INFO/version.txt";
-        private const String ChangelogPath = "https://raw.github.com/EvilSeven/Consultant-Plus/master/INFO/changelog.txt";
 
         private readonly String OtherText =
             @"©" + DateTime.Now.Year +
@@ -60,10 +57,38 @@ Licensed under GNU LGPL (http://www.gnu.org/)
 
             CloseProject();
 
-            Licensing.CreateLicense(this, HelpString, AppTitle, AppVersion, OtherText, VersionPath, UpdatePath, ChangelogPath, menuStrip1);
-
+            Licensing.CreateLicense(this, menuStrip1, new Licensing.SolutionDetails(GetDetails, HelpString, AppTitle, AppVersion, OtherText));
+            
             LoadConfig();
         }
+
+        public Licensing.DownloadedSolutionDetails GetDetails()
+        {
+            try
+            {
+                var sr = new ServicesClient();
+                var ti = sr.GetTitleInfo(AppTitle);
+                if (ti == null)
+                    return null;
+                return ToDownloadedSolutionDetails(ti);
+
+            }
+            catch (Exception)
+            {
+            }
+            return null;
+        }
+
+        public static Licensing.DownloadedSolutionDetails ToDownloadedSolutionDetails(TitleInfoServiceModel tism)
+        {
+            return new Licensing.DownloadedSolutionDetails()
+            {
+                ZipFileLocation = tism.LatestTitleDownloadPath,
+                ChangeLog = tism.LatestTitleChangelog,
+                Version = tism.LatestTitleVersion
+            };
+        }
+
 
         private void LoadConfig()
         {
@@ -128,7 +153,7 @@ Licensed under GNU LGPL (http://www.gnu.org/)
             clientlabel.Text = pn.ClientName;
             currencycodelabel.Text = pn.CurrencyCode;
             p = pn;
-            TabPageUpdates.SetEnableOnAllTabPagesInTabControl(tabControl1, true);
+            TabPageExtras.SetEnableOnAllTabPagesInTabControl(tabControl1, true);
             LoadSessions();
             datetextbox.Text = DateTime.Now.ToShortDateString();
         }
@@ -144,13 +169,13 @@ Licensed under GNU LGPL (http://www.gnu.org/)
             currencycodelabel.Text = "";
             StopTimer();
             ClearSessions();
-            TabPageUpdates.SetEnableOnAllTabPagesInTabControl(tabControl1, false, new List<TabPage>() { infopage });
+            TabPageExtras.SetEnableOnAllTabPagesInTabControl(tabControl1, false, new List<TabPage>() { infopage });
         }
 
         private void openProjectToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var fbd = new FolderBrowserDialog();
-            var pp = DirectoryUpdates.GetExePath() + "\\" + projectdir;
+            var pp = DirectoryExtras.GetExePath() + "\\" + projectdir;
             fbd.SelectedPath = pp;
             fbd.Description = "Select project to open";
             var r = fbd.ShowDialog();
@@ -277,7 +302,7 @@ Licensed under GNU LGPL (http://www.gnu.org/)
 
         private void hourcost_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = TextboxUpdates.HandleInputAsFloat(e.KeyChar, hourcost);
+            e.Handled = TextboxExtras.HandleInputAsFloat(e.KeyChar, hourcost);
         }
 
         private void posttimebutton_Click(object sender, EventArgs e)
@@ -288,7 +313,7 @@ Licensed under GNU LGPL (http://www.gnu.org/)
             try
             {
                 ts = GetTotalSeconds();
-                h = MathUpdates.Truncate(TimeUpdates.GetHours(ts));
+                h = MathExtras.Truncate(TimeUpdates.GetHours(ts));
                 hourlyrate = double.Parse(hourcost.Text);
             }
             catch (Exception)
@@ -303,15 +328,15 @@ Licensed under GNU LGPL (http://www.gnu.org/)
 
             var s = new Session(datetextbox.Text, hourlyrate, commentstextbox.Text, h);
 
-            ListViewUpdate.CopyClassToListView(sessions, s);
+            ListViewExtras.CopyClassToListView(sessions, s);
             controller.UpdateManualColumns(sessions, p);
             SaveSessions();
         }
 
         private List<Session> SerialiseSessions()
         {
-            var os = ListViewUpdate.GetObjectsFromListViewItems(sessions, typeof(Session));
-            return ListUpdates.ChangeListTyping<Session>(os);
+            var os = ListViewExtras.GetObjectsFromListViewItems(sessions, typeof(Session));
+            return ListExtras.ChangeListTyping<Session>(os);
         }
 
         private void DeserialiseSession(IEnumerable<Session> sessionsA)
@@ -319,7 +344,7 @@ Licensed under GNU LGPL (http://www.gnu.org/)
             ClearSessions();
             foreach (var s in sessionsA)
             {
-                ListViewUpdate.CopyClassToListView(sessions, s);
+                ListViewExtras.CopyClassToListView(sessions, s);
             }
         }
 
@@ -343,9 +368,9 @@ Licensed under GNU LGPL (http://www.gnu.org/)
         {
             sessions.Items.Clear();
             sessions.Columns.Clear();
-            ListViewUpdate.InitColumnHeaders(sessions, typeof(Session));
+            ListViewExtras.InitColumnHeaders(sessions, typeof(Session));
             sessions.Columns.Insert(3, chargecolumn);
-            ListViewUpdate.AutoResize(sessions);
+            ListViewExtras.AutoResize(sessions);
             UpdateSessionButtons();
         }
 
@@ -399,22 +424,22 @@ Licensed under GNU LGPL (http://www.gnu.org/)
 
         private void daysTB_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = TextboxUpdates.HandleInput(TextboxUpdates.InputType.Create(false, true),e.KeyChar,daysTB);
+            e.Handled = TextboxExtras.HandleInput(TextboxExtras.InputType.Create(false, true),e.KeyChar,daysTB);
         }
 
         private void hoursTB_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = TextboxUpdates.HandleInput(TextboxUpdates.InputType.Create(false, true), e.KeyChar, hoursTB);
+            e.Handled = TextboxExtras.HandleInput(TextboxExtras.InputType.Create(false, true), e.KeyChar, hoursTB);
         }
 
         private void minutesTB_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = TextboxUpdates.HandleInput(TextboxUpdates.InputType.Create(false, true), e.KeyChar, minutesTB);
+            e.Handled = TextboxExtras.HandleInput(TextboxExtras.InputType.Create(false, true), e.KeyChar, minutesTB);
         }
 
         private void secondsTB_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = TextboxUpdates.HandleInput(TextboxUpdates.InputType.Create(false, true), e.KeyChar, secondsTB);
+            e.Handled = TextboxExtras.HandleInput(TextboxExtras.InputType.Create(false, true), e.KeyChar, secondsTB);
         }
     }
 }

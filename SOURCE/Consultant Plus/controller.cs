@@ -43,10 +43,10 @@ namespace Consultant_Plus
             Directory.CreateDirectory(projectpath);
 
             //project info file
-            FileUpdates.CreateFile(GetInfoFilePath(projectpath));
+            FileExtras.CreateFile(GetInfoFilePath(projectpath));
 
             //timesheets file
-            FileUpdates.CreateFile(GetTimesheetPath(projectpath));
+            FileExtras.CreateFile(GetTimesheetPath(projectpath));
         }
 
         public static bool SaveProject(Project p)
@@ -77,16 +77,16 @@ namespace Consultant_Plus
                 ts += Reflection.SerialiseObject(s) + "\b";
             }
 
-            FileUpdates.SaveToFile(tp, ts);
+            FileExtras.SaveToFile(tp, ts);
         }
 
         public static List<Session> LoadTimesheet(Project p)
         {
-            var file = FileUpdates.LoadFile(GetTimesheetPath(p.GetProjectPath()));
+            var file = FileExtras.LoadFile(GetTimesheetPath(p.GetProjectPath()));
             if (String.IsNullOrEmpty(file))
                 return null;
 
-            var sessions = StringUpdates.SplitString(file, "\b");
+            var sessions = StringExtras.SplitString(file, "\b");
             var ret = new List<Session>();
             foreach (var s in sessions)
             {
@@ -108,7 +108,7 @@ namespace Consultant_Plus
             var fn = Reflection.GetFieldName(() => ptemp.ProjectName);
             var fv = ptemp.ProjectName;
 
-            overloads.Add(MassVariableEdit.TextBoxItems.Create(fn, fv, null, a, "Project Name must be at least one character"));
+            overloads.Add(new MassVariableEdit.TextBoxItems(fn, fv, null, a, "Project Name must be at least one character"));
 
             var res = MassVariableEdit.ShowDialogStatic(create ? "Create Project" : "Edit Project", ptemp, overloads);
             if (res == null)
@@ -131,13 +131,13 @@ namespace Consultant_Plus
             var overloads = new List<MassVariableEdit.TextBoxItems>();
             var fn = Reflection.GetFieldName(() => s.Hours);
             var fv = s.Hours.ToString();
-            overloads.Add(MassVariableEdit.TextBoxItems.Create(fn, fv,TextboxUpdates.HandleInputAsFloat));
+            overloads.Add(new MassVariableEdit.TextBoxItems(fn, fv, TextboxExtras.HandleInputAsFloat));
 
             fn = Reflection.GetFieldName(() => s.HourlyRate);
             fv = s.HourlyRate.ToString();
-            overloads.Add(MassVariableEdit.TextBoxItems.Create(fn, fv, TextboxUpdates.HandleInputAsFloat));
+            overloads.Add(new MassVariableEdit.TextBoxItems(fn, fv, TextboxExtras.HandleInputAsFloat));
 
-            var res = MassVariableEdit.ShowDialogStatic(create ? "Create Session" : "Edit Session", s,overloads);
+            var res = MassVariableEdit.ShowDialogStatic(create ? "Create Session" : "Edit Session", s, overloads);
             if (res == null)
                 return null;
 
@@ -151,13 +151,13 @@ namespace Consultant_Plus
             if (s == null)
                 return;
 
-            ListViewUpdate.CopyClassToListView(lv, s);
+            ListViewExtras.CopyClassToListView(lv, s);
         }
 
         public static void EditTimesheet(ListView lv, ListViewItem lvi)
         {
             //get the existing session
-            var s = (Session)ListViewUpdate.GetObjectFromListViewItem(lv, lvi, typeof(Session));
+            var s = (Session)ListViewExtras.GetObjectFromListViewItem(lv, lvi, typeof(Session));
 
             //show the edit dialog
             var news = ShowTimesheetDialog(s);
@@ -166,7 +166,7 @@ namespace Consultant_Plus
                 return;
 
             //move the changed session back to the LV
-            ListViewUpdate.CopyClassToListView(lv, news, lvi);
+            ListViewExtras.CopyClassToListView(lv, news, lvi);
         }
 
         public static void UpdateManualColumns(ListView lv, Project p)
@@ -176,13 +176,13 @@ namespace Consultant_Plus
             var hourcolname = Reflection.GetFieldName(() => tests.HourlyRate);
             foreach (ListViewItem lvi in lv.Items)
             {
-                var totalhours = Double.Parse(ListViewUpdate.GetColumn(lv, lvi, totalhoursname));
-                var hourlyrate = Double.Parse(ListViewUpdate.GetColumn(lv, lvi, hourcolname));
+                var totalhours = Double.Parse(ListViewExtras.GetColumn(lv, lvi, totalhoursname));
+                var hourlyrate = Double.Parse(ListViewExtras.GetColumn(lv, lvi, hourcolname));
                 //manual change columns
-                var chg = MathUpdates.Truncate(totalhours * hourlyrate).ToString() + " " + p.CurrencyCode;
-                ListViewUpdate.SetColumn(lv, lvi, Form1.chargecolumn, chg);
+                var chg = MathExtras.Truncate(totalhours * hourlyrate).ToString() + " " + p.CurrencyCode;
+                ListViewExtras.SetColumn(lv, lvi, Form1.chargecolumn, chg);
             }
-            ListViewUpdate.AutoResize(lv);
+            ListViewExtras.AutoResize(lv);
         }
 
         public static Project CreateProject(string basedir)
