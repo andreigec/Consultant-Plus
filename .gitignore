@@ -1,8 +1,3 @@
-
-/SOURCE/Consultant Plus/Consultant Plus.6.0.ReSharper.user
-/SOURCE/Consultant Plus/_ReSharper.Consultant Plus
-/SOURCE/Consultant Plus/Consultant Plus/bin
-/SOURCE/Consultant Plus/Consultant Plus/obj
-/SOURCE/_ReSharper.Consultant Plus
-/SOURCE/Consultant Plus/obj
-/SOURCE/Consultant Plus/bin
+*.suo
+bin
+obj
